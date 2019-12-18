@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -11,13 +12,18 @@ using System.Windows.Forms;
 
 namespace EkranYakala
 {
+    
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+            TopMost = true;
+            this.MaximizeBox = false;
+       
         }
        
+        
         string yol;  //Farklı fonksiyonlardan müdahale edebilmek için globalde yol u tutan string değişken.
         
         
@@ -58,8 +64,8 @@ namespace EkranYakala
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {           
-            
+        {
+            this.KeyPreview = true;
             string son_kayitli_yol=Properties.Settings.Default.yol;// uygulama properties'indeki yol u "son_kayitli_yol" değişkenine atıyoruz.            
             if (son_kayitli_yol==null) //bu değişken boş veya dolumu kontrolü yapıyoruz. eğer boş ise henüz yol belirtilmemiş demektir. 
             {
@@ -85,5 +91,20 @@ namespace EkranYakala
           
             
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Alt | Keys.W))
+            {
+                button1.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Process.Start(Properties.Settings.Default.yol);
+        }
+
     }
 }
