@@ -5,9 +5,12 @@ Yaklaşık 1 saat içerisinde kendi geliştirdiğim küçük ama işe yarayan bi
 
 . Uygulama ilk açıldığında 1 kereliğine size yakalanan görüntülerin nereye kaydedileceğini seçmenizi isteyecektir. Daha sonradan kaydedilecek yeri değiştirebilirsiniz.
 
-. Arayüz oldukça basit olup iki adet buton bulunmakta Yakala ve daha önceden belirlediğiniz kaydetme konumunu değiştirmeniz için başka bir buton.
+. Arayüz oldukça basit olup 3 adet buton bulunmakta Yakala, daha önceden belirlediğiniz kaydetme konumunu değiştirmeniz için ve kaydedilen klasörü açmak için başka bir buton.
 
 . Birde yakalanan ekran görüntüsünün önizlemesi. 
+
+![](https://i.ibb.co/LCMDths/Ekran-Yakala.png)
+
 
 Bu kadar, yakalaya basıyorsunuz ve ekran görüntüsünü kaydediyor tekrar basarsanız tekrar kaydeder.
 
