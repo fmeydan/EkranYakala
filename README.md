@@ -9,6 +9,9 @@ Yaklaşık 1 saat içerisinde kendi geliştirdiğim küçük ama işe yarayan bi
 
 . Birde yakalanan ekran görüntüsünün önizlemesi. 
 
+![](https://i.ibb.co/LCMDths/Ekran-Yakala.png)
+
+
 Bu kadar, yakalaya basıyorsunuz ve ekran görüntüsünü kaydediyor tekrar basarsanız tekrar kaydeder.
 
 Henüz seçili alanı kaydet özelliği mevcut değil tam ekran olarak yakar.
