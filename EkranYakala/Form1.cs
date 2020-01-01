@@ -67,7 +67,7 @@ namespace EkranYakala
         {
             this.KeyPreview = true;
             string son_kayitli_yol=Properties.Settings.Default.yol;// uygulama properties'indeki yol u "son_kayitli_yol" değişkenine atıyoruz.            
-            if (son_kayitli_yol==null) //bu değişken boş veya dolumu kontrolü yapıyoruz. eğer boş ise henüz yol belirtilmemiş demektir. 
+            if (string.IsNullOrWhiteSpace(son_kayitli_yol)) //bu değişken boş veya dolumu kontrolü yapıyoruz. eğer boş ise henüz yol belirtilmemiş demektir. 
             {
                 DialogResult result = MessageBox.Show("Kaydetme Yerini Seçin", "Ekran Yakala", MessageBoxButtons.OK);
                 if (result == DialogResult.OK)
@@ -81,6 +81,14 @@ namespace EkranYakala
                         Properties.Settings.Default.yol = yol;//yol'un hafızada kalması için uygulama Propertiesine kaydediyoruz.
                         Properties.Settings.Default.Save(); //Properties e kaydetme işlmeni onaylıyoruz.
                     }
+                    else
+                    {
+                        Application.Exit();
+                    }
+                }
+                else
+                {
+                    Application.Exit();
                 }
             }
             else
